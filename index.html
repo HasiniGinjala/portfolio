@@ -1,0 +1,532 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ginjala Hasini | Portfolio</title>
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'><rect width='64' height='64' rx='10' fill='%23ffffff'/><text x='32' y='44' font-family='monospace' font-size='30' font-weight='bold' fill='%232dd4bf' text-anchor='middle'>GH</text></svg>" type="image/svg+xml">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Fira+Code:wght@400;500&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!-- Cursor glow -->
+    <div class="cursor-glow" id="cursorGlow"></div>
+
+    <!-- Particle canvas -->
+    <canvas id="particles"></canvas>
+
+    <!-- Navigation -->
+    <nav id="navbar">
+        <div class="nav-logo">&lt;GH /&gt;</div>
+        <ul class="nav-links">
+            <li><a href="#home" class="nav-link active">Home</a></li>
+            <li><a href="#about" class="nav-link">About</a></li>
+            <li><a href="#skills" class="nav-link">Skills</a></li>
+            <li><a href="#projects" class="nav-link">Projects</a></li>
+            <li><a href="#experience" class="nav-link">Experience</a></li>
+            <li><a href="#achievements" class="nav-link">Achievements</a></li>
+            <li><a href="#contact" class="nav-link">Contact</a></li>
+        </ul>
+        <div class="nav-hamburger" id="hamburger">
+            <span></span><span></span><span></span>
+        </div>
+    </nav>
+
+    <!-- Side Dots Navigation -->
+    <div class="side-dots" id="sideDots">
+        <a href="#home" class="dot active" data-section="home" title="Home"><span class="dot-label">Home</span></a>
+        <a href="#about" class="dot" data-section="about" title="About"><span class="dot-label">About</span></a>
+        <a href="#skills" class="dot" data-section="skills" title="Skills"><span class="dot-label">Skills</span></a>
+        <a href="#projects" class="dot" data-section="projects" title="Projects"><span class="dot-label">Projects</span></a>
+        <a href="#experience" class="dot" data-section="experience" title="Experience"><span class="dot-label">Exp</span></a>
+        <a href="#achievements" class="dot" data-section="achievements" title="Achievements"><span class="dot-label">Awards</span></a>
+        <a href="#contact" class="dot" data-section="contact" title="Contact"><span class="dot-label">Contact</span></a>
+    </div>
+
+    <!-- ==================== HOME ==================== -->
+    <section id="home" class="section section-home">
+        <div class="home-container">
+            <div class="home-text">
+                <p class="home-greeting">Hi there, I'm</p>
+                <h1 class="home-name"><span class="gradient-text">Ginjala Hasini</span></h1>
+                <div class="typed-wrapper">
+                    <span class="typed-prefix">I build </span><span class="typed-text" id="typedText"></span><span class="typed-cursor">|</span>
+                </div>
+                <p class="home-tagline">Year 1 AI &amp; Analytics student at Nanyang Polytechnic &mdash; turning raw data into actionable insights, building full-stack apps that bridge communities, and crafting digital experiences that make technology accessible.</p>
+                <div class="home-cta">
+                    <a href="#projects" class="btn btn-primary"><span>View My Work</span></a>
+                    <a href="#contact" class="btn btn-outline"><span>Get In Touch</span></a>
+                </div>
+            </div>
+            <div class="home-image">
+                <div class="pfp-wrapper">
+                    <img src="images/pfp.jpg" alt="Ginjala Hasini" class="pfp">
+                </div>
+            </div>
+        </div>
+        <div class="scroll-indicator">
+            <div class="mouse">
+                <div class="mouse-wheel"></div>
+            </div>
+            <p class="scroll-text">Scroll down</p>
+        </div>
+    </section>
+
+    <!-- ==================== ABOUT ==================== -->
+    <section id="about" class="section">
+        <div class="section-container">
+            <h2 class="section-title"><span class="title-num">01.</span> About Me</h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <p>I'm driven by the intersection of <span class="highlight">AI, data analytics, and web development</span>. My goal is to leverage technology to solve real-world problems &mdash; from building inclusive platforms that connect generations, to analysing healthcare data that informs policy decisions.</p>
+                    <p>Currently pursuing a Diploma in Applied AI &amp; Analytics at NYP, I bring hands-on experience in full-stack development, data visualisation, and UX design. I believe great technology should be accessible, secure, and human-centred.</p>
+                </div>
+                <div class="about-extras">
+                    <div class="about-card glass-card">
+                        <h3>Beyond Tech</h3>
+                        <ul class="about-list">
+                            <li><span class="highlight">NYP Indian Cultural Group</span> &mdash; Dancer</li>
+                            <li><span class="highlight">NYAA Gold Award</span> (in progress) &mdash; 80+ service hours completed</li>
+                            <li><span class="highlight">Art Club EXCO</span> &mdash; 3 years in secondary school, with artworks exhibited at Sengkang National Library</li>
+                            <li><span class="highlight">NYP SIT Club</span> &mdash; Member</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== SKILLS ==================== -->
+    <section id="skills" class="section">
+        <div class="section-container">
+            <h2 class="section-title"><span class="title-num">02.</span> Skills</h2>
+            <p class="skills-subtitle">These are the tools &amp; technologies I work with daily.</p>
+            <div class="skills-grid">
+                <div class="skill-card" data-category="lang" style="--delay: 0">
+                    <div class="skill-icon-wrap">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" alt="HTML" class="skill-icon">
+                    </div>
+                    <span class="skill-name">HTML</span>
+                </div>
+                <div class="skill-card" data-category="lang" style="--delay: 1">
+                    <div class="skill-icon-wrap">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" alt="CSS" class="skill-icon">
+                    </div>
+                    <span class="skill-name">CSS</span>
+                </div>
+                <div class="skill-card" data-category="lang" style="--delay: 2">
+                    <div class="skill-icon-wrap">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" alt="JavaScript" class="skill-icon">
+                    </div>
+                    <span class="skill-name">JavaScript</span>
+                </div>
+                <div class="skill-card" data-category="lang" style="--delay: 3">
+                    <div class="skill-icon-wrap">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="Python" class="skill-icon">
+                    </div>
+                    <span class="skill-name">Python</span>
+                </div>
+                <div class="skill-card" data-category="framework" style="--delay: 4">
+                    <div class="skill-icon-wrap">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/flask/flask-original.svg" alt="Flask" class="skill-icon skill-icon-light">
+                    </div>
+                    <span class="skill-name">Flask</span>
+                </div>
+                <div class="skill-card" data-category="framework" style="--delay: 5">
+                    <div class="skill-icon-wrap">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/jinja/jinja-original.svg" alt="Jinja" class="skill-icon skill-icon-light">
+                    </div>
+                    <span class="skill-name">Jinja</span>
+                </div>
+                <div class="skill-card" data-category="framework" style="--delay: 6">
+                    <div class="skill-icon-wrap">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bootstrap/bootstrap-original.svg" alt="Bootstrap" class="skill-icon">
+                    </div>
+                    <span class="skill-name">Bootstrap</span>
+                </div>
+                <div class="skill-card" data-category="data" style="--delay: 7">
+                    <div class="skill-icon-wrap">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" alt="MySQL" class="skill-icon">
+                    </div>
+                    <span class="skill-name">MySQL</span>
+                </div>
+                <div class="skill-card" data-category="data" style="--delay: 8">
+                    <div class="skill-icon-wrap">
+                        <svg class="skill-icon" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M24 4L6 14v20l18 10 18-10V14L24 4z" fill="#F2C811"/><path d="M24 4L6 14l18 10 18-10L24 4z" fill="#F2C811"/><path d="M24 24v20l18-10V14L24 24z" fill="#D9A800"/><path d="M24 24v20L6 34V14l18 10z" fill="#E6BA0A"/></svg>
+                    </div>
+                    <span class="skill-name">Power BI</span>
+                </div>
+                <div class="skill-card" data-category="data" style="--delay: 9">
+                    <div class="skill-icon-wrap">
+                        <svg class="skill-icon" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="4" y="8" width="8" height="32" rx="2" fill="#E97627"/><rect x="14" y="16" width="8" height="24" rx="2" fill="#C72037"/><rect x="24" y="12" width="8" height="28" rx="2" fill="#5B879B"/><rect x="34" y="4" width="8" height="36" rx="2" fill="#5F5F5F"/></svg>
+                    </div>
+                    <span class="skill-name">Tableau</span>
+                </div>
+                <div class="skill-card" data-category="deploy" style="--delay: 10">
+                    <div class="skill-icon-wrap">
+                        <svg class="skill-icon" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="24" cy="24" r="18" fill="#46E3B7" opacity="0.2"/><path d="M24 8l14 8v16l-14 8-14-8V16l14-8z" stroke="#46E3B7" stroke-width="2" fill="none"/></svg>
+                    </div>
+                    <span class="skill-name">Render</span>
+                </div>
+                <div class="skill-card" data-category="deploy" style="--delay: 11">
+                    <div class="skill-icon-wrap">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" alt="Git" class="skill-icon">
+                    </div>
+                    <span class="skill-name">Git</span>
+                </div>
+                <div class="skill-card" data-category="deploy" style="--delay: 12">
+                    <div class="skill-icon-wrap">
+                        <svg class="skill-icon" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="24" cy="24" r="18" fill="#0B0D11"/><circle cx="24" cy="24" r="6" fill="#fff"/><path d="M24 8v10M24 30v10M8 24h10M30 24h10" stroke="#fff" stroke-width="2"/></svg>
+                    </div>
+                    <span class="skill-name">Railway</span>
+                </div>
+            </div>
+            <div class="skills-legend">
+                <button class="legend-btn active" data-filter="all">All</button>
+                <button class="legend-btn" data-filter="lang">Languages</button>
+                <button class="legend-btn" data-filter="framework">Frameworks</button>
+                <button class="legend-btn" data-filter="data">Data &amp; DB</button>
+                <button class="legend-btn" data-filter="deploy">Deployment</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== PROJECTS ==================== -->
+    <section id="projects" class="section">
+        <div class="section-container">
+            <h2 class="section-title"><span class="title-num">03.</span> Projects</h2>
+            <div class="projects-grid">
+
+                <!-- Project 1: NYP SU Website -->
+                <div class="project-card tilt-card" onclick="openModal('modal-nypsu')">
+                    <div class="project-card-glow"></div>
+                    <div class="project-thumb white-bg">
+                        <img src="images/NYPSU_Logo.jpg" alt="NYP Students' Union Website" class="project-logo">
+                        <div class="project-overlay">
+                            <span>Click to explore</span>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <h3>NYP Students' Union Website</h3>
+                        <p>Front-end CCA website with embedded Instagram feed and dynamic UI</p>
+                        <div class="project-tags">
+                            <span>HTML</span><span>CSS</span><span>JavaScript</span><span>Bootstrap</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 2: Genlink -->
+                <div class="project-card tilt-card" onclick="openModal('modal-genlink')">
+                    <div class="project-card-glow"></div>
+                    <div class="project-thumb white-bg">
+                        <img src="images/Genlink.png" alt="Genlink Platform" class="project-logo">
+                        <div class="project-overlay">
+                            <span>Click to explore</span>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <h3>Genlink &mdash; Intergenerational Platform</h3>
+                        <p>Full-stack web app connecting youth and elderly through shared memories</p>
+                        <div class="project-tags">
+                            <span>Python</span><span>Flask</span><span>MySQL</span><span>Bootstrap</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 3: Power BI Dashboard -->
+                <div class="project-card tilt-card" onclick="openModal('modal-powerbi')">
+                    <div class="project-card-glow"></div>
+                    <div class="project-thumb">
+                        <img src="images/powerbi.jpeg" alt="Hospital Dashboard" onerror="this.style.display='none'; this.parentElement.classList.add('no-img');">
+                        <div class="project-overlay">
+                            <span>Click to explore</span>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <h3>Hospital Patient Flow Dashboard</h3>
+                        <p>Data analytics dashboard built with real government healthcare datasets</p>
+                        <div class="project-tags">
+                            <span>Power BI</span><span>DAX</span><span>Data Analytics</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Project Modals -->
+    <div class="modal" id="modal-nypsu">
+        <div class="modal-content">
+            <button class="modal-close" onclick="closeModal('modal-nypsu')">&times;</button>
+            <h2>NYP Students' Union Website</h2>
+            <div class="modal-body">
+                <div class="modal-video">
+                    <video controls muted>
+                        <source src="images/NYPSUWebsite.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
+                <p>Built a responsive website for <strong>Nanyang Polytechnic Students' Union (NYP SU)</strong> &mdash; the driving force behind major campus events including Open House, Freshman Orientation, and Graduation ceremonies.</p>
+                <p>Integrated Instagram's embed feature for a live carousel of NYP SU's social feed, designed a wavy animated footer to spotlight quick links, and focused on clean UI that reflects the Union's energetic campus culture.</p>
+                <div class="modal-tags">
+                    <span>HTML</span><span>CSS</span><span>JavaScript</span><span>Bootstrap</span><span>Instagram Embed API</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal" id="modal-genlink">
+        <div class="modal-content">
+            <button class="modal-close" onclick="closeModal('modal-genlink')">&times;</button>
+            <h2>Genlink &mdash; Intergenerational Platform</h2>
+            <div class="modal-body">
+                <div class="modal-video">
+                    <video controls muted>
+                        <source src="images/GenlinkVideo.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
+                <p><strong>Genlink</strong> bridges the generational gap by connecting youth and elderly through shared stories and meaningful friendships. The platform features adjustable text sizes, dark mode, and multilingual support powered by Google Neural Machine Translation &mdash; ensuring accessibility for seniors and digital-native youth alike.</p>
+                <p>On the backend, MySQL on Railway provides reliable data storage, while robust authentication with input validation, account lockout policies, and time-sensitive password reset tokens via Gmail SMTP with TLS encryption safeguards user trust. Deployed on Render.com for seamless access.</p>
+                <a href="https://wdpprojectfinal-production.up.railway.app" target="_blank" class="btn btn-primary modal-link">View Live Site</a>
+                <div class="modal-tags">
+                    <span>HTML</span><span>CSS</span><span>JavaScript</span><span>Python</span><span>Flask</span><span>MySQL</span><span>Jinja</span><span>Bootstrap</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal" id="modal-powerbi">
+        <div class="modal-content">
+            <button class="modal-close" onclick="closeModal('modal-powerbi')">&times;</button>
+            <h2>Hospital Patient Flow &amp; Efficiency Dashboard</h2>
+            <div class="modal-body">
+                <div class="modal-image">
+                    <img src="images/powerbi.jpeg" alt="Power BI Dashboard">
+                </div>
+                <p>Analysed <strong>5 real government datasets</strong> from data.gov.sg, OECD, and SingStat to build an interactive Power BI dashboard exploring hospital patient flow patterns across Singapore.</p>
+                <p>Created custom DAX measures for dynamic year filtering, KPI cards tracking bed capacity growth (+4.6%), average wait times, and demographic breakdowns. Key findings revealed that 34.3% of daily patients arrive during the 12&ndash;6 PM peak window, with the 65+ age group accounting for 62.77% of admissions &mdash; insights that directly inform staffing and capacity planning decisions.</p>
+                <div class="modal-tags">
+                    <span>Power BI</span><span>DAX</span><span>Data Cleaning</span><span>Data Visualisation</span><span>Healthcare Analytics</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ==================== EXPERIENCE ==================== -->
+    <section id="experience" class="section">
+        <div class="section-container">
+            <h2 class="section-title"><span class="title-num">04.</span> Experience</h2>
+            <div class="experience-content">
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-date">June 2022</div>
+                        <div class="timeline-card glass-card">
+                            <h3>Internship at Hatch</h3>
+                            <p class="timeline-subtitle">Youth Digital Skills Organisation</p>
+                            <p>Supported underserved youth through digital skills initiatives at <a href="https://hatch.sg/" target="_blank" class="inline-link">Hatch</a>, a startup dedicated to empowering communities through technology.</p>
+                            <ul class="timeline-list">
+                                <li>Designed <strong>5 UX wireframes</strong> and <strong>3 mood boards</strong> proposing navigation improvements for 200+ underserved youth users</li>
+                                <li>Contributed to the <strong>Q3 2022 website redesign</strong> enhancing accessibility and user engagement</li>
+                                <li>Gained exposure to industry tech talks, deepening interest in digital innovation</li>
+                            </ul>
+                            <div class="reference-letters">
+                                <h4>Reference Letters</h4>
+                                <div class="ref-grid">
+                                    <div class="ref-card" onclick="openImageModal('images/Reference Letter for Hasini from Hatch.pdf')">
+                                        <div class="ref-icon">&#128196;</div>
+                                        <span>From Hatch</span>
+                                    </div>
+                                    <div class="ref-card" onclick="openImageModal('images/Reference Letter for Hasini from Crater.pdf')">
+                                        <div class="ref-icon">&#128196;</div>
+                                        <span>From Crater</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== ACHIEVEMENTS ==================== -->
+    <section id="achievements" class="section">
+        <div class="section-container">
+            <h2 class="section-title"><span class="title-num">05.</span> Achievements</h2>
+
+            <h3 class="achievement-category-title">Technical Certificates</h3>
+            <div class="certs-grid">
+                <div class="cert-card" onclick="openImageModal('images/ANL25-Cert_GinjalaHasini.png')">
+                    <div class="cert-thumb-wrap">
+                        <img src="images/ANL25-Cert_GinjalaHasini.png" alt="" class="cert-thumb">
+                        <div class="cert-thumb-overlay">View Certificate</div>
+                    </div>
+                    <h4>SUSS Visualisation Challenge</h4>
+                    <p>Tableau dashboards analysing 5,000+ patient records</p>
+                </div>
+                <div class="cert-card" onclick="openImageModal('images/CertificateOfCompletion_WEB202012_Ginjala-Hasini_2021-01-10.png')">
+                    <div class="cert-thumb-wrap">
+                        <img src="images/CertificateOfCompletion_WEB202012_Ginjala-Hasini_2021-01-10.png" alt="" class="cert-thumb">
+                        <div class="cert-thumb-overlay">View Certificate</div>
+                    </div>
+                    <h4>Web Development Bootcamp</h4>
+                    <p>HTML, CSS &amp; JS by Ipasmo Technologies</p>
+                </div>
+                <div class="cert-card" onclick="openImageModal('images/certificate-y5nodksmomui-1764077044.png')">
+                    <div class="cert-thumb-wrap">
+                        <img src="images/certificate-y5nodksmomui-1764077044.png" alt="" class="cert-thumb">
+                        <div class="cert-thumb-overlay">View Certificate</div>
+                    </div>
+                    <h4>Anthropic AI Fluency</h4>
+                    <p>AI Framework &amp; Foundations</p>
+                </div>
+                <div class="cert-card" onclick="openImageModal('images/Internship Certificate 2022.png')">
+                    <div class="cert-thumb-wrap">
+                        <img src="images/Internship Certificate 2022.png" alt="" class="cert-thumb">
+                        <div class="cert-thumb-overlay">View Certificate</div>
+                    </div>
+                    <h4>Professional Conduct Training</h4>
+                    <p>Crater's Meteor Programme</p>
+                </div>
+                <div class="cert-card" onclick="openImageModal('images/student-maker-bootcamp.jpg')">
+                    <div class="cert-thumb-wrap">
+                        <img src="images/student-maker-bootcamp.jpg" alt="" class="cert-thumb">
+                        <div class="cert-thumb-overlay">View Certificate</div>
+                    </div>
+                    <h4>Student Maker Bootcamp</h4>
+                    <p>Micro:bit pH water detector</p>
+                </div>
+                <div class="cert-card" onclick="openImageModal('images/Self_Learning.jpeg')">
+                    <div class="cert-thumb-wrap">
+                        <img src="images/Self_Learning.jpeg" alt="" class="cert-thumb">
+                        <div class="cert-thumb-overlay">View Certificate</div>
+                    </div>
+                    <h4>Self-Learning Programme</h4>
+                    <p>Independent skill development</p>
+                </div>
+                <div class="cert-card" onclick="openImageModal('images/InternationalResearch.jpeg')">
+                    <div class="cert-thumb-wrap">
+                        <img src="images/InternationalResearch.jpeg" alt="" class="cert-thumb">
+                        <div class="cert-thumb-overlay">View Certificate</div>
+                    </div>
+                    <h4>International Research Programme</h4>
+                    <p>Chengdu Aeronautic Polytechnic University</p>
+                </div>
+            </div>
+
+            <h3 class="achievement-category-title">Educational Awards</h3>
+            <div class="certs-grid">
+                <div class="cert-card" onclick="openImageModal('images/EdusaveMerit2024.jpeg')">
+                    <div class="cert-thumb-wrap">
+                        <img src="images/EdusaveMerit2024.jpeg" alt="" class="cert-thumb">
+                        <div class="cert-thumb-overlay">View Award</div>
+                    </div>
+                    <h4>Edusave Merit Award</h4>
+                    <p>2024</p>
+                </div>
+                <div class="cert-card" onclick="openImageModal('images/EdusaveAchievement2024.jpeg')">
+                    <div class="cert-thumb-wrap">
+                        <img src="images/EdusaveAchievement2024.jpeg" alt="" class="cert-thumb">
+                        <div class="cert-thumb-overlay">View Award</div>
+                    </div>
+                    <h4>Academic Achievement</h4>
+                    <p>2024</p>
+                </div>
+                <div class="cert-card" onclick="openImageModal('images/EdusaveProgress2023.jpeg')">
+                    <div class="cert-thumb-wrap">
+                        <img src="images/EdusaveProgress2023.jpeg" alt="" class="cert-thumb">
+                        <div class="cert-thumb-overlay">View Award</div>
+                    </div>
+                    <h4>Good Progress Award</h4>
+                    <p>2023</p>
+                </div>
+                <div class="cert-card" onclick="openImageModal('images/EdusaveAchievement2023.jpeg')">
+                    <div class="cert-thumb-wrap">
+                        <img src="images/EdusaveAchievement2023.jpeg" alt="" class="cert-thumb">
+                        <div class="cert-thumb-overlay">View Award</div>
+                    </div>
+                    <h4>Academic Achievement</h4>
+                    <p>2023</p>
+                </div>
+                <div class="cert-card" onclick="openImageModal('images/SINDA2023.jpeg')">
+                    <div class="cert-thumb-wrap">
+                        <img src="images/SINDA2023.jpeg" alt="" class="cert-thumb">
+                        <div class="cert-thumb-overlay">View Award</div>
+                    </div>
+                    <h4>SINDA Sustained Improvement</h4>
+                    <p>Science &mdash; 2023</p>
+                </div>
+                <div class="cert-card" onclick="openImageModal('images/EdusaveScholarship2021.jpeg')">
+                    <div class="cert-thumb-wrap">
+                        <img src="images/EdusaveScholarship2021.jpeg" alt="" class="cert-thumb">
+                        <div class="cert-thumb-overlay">View Award</div>
+                    </div>
+                    <h4>Edusave Scholarship</h4>
+                    <p>2021</p>
+                </div>
+                <div class="cert-card" onclick="openImageModal('images/EdusaveAchievement2020.jpeg')">
+                    <div class="cert-thumb-wrap">
+                        <img src="images/EdusaveAchievement2020.jpeg" alt="" class="cert-thumb">
+                        <div class="cert-thumb-overlay">View Award</div>
+                    </div>
+                    <h4>Academic Achievement</h4>
+                    <p>2020</p>
+                </div>
+                <div class="cert-card" onclick="openImageModal('images/EdusaveProgress2020.jpeg')">
+                    <div class="cert-thumb-wrap">
+                        <img src="images/EdusaveProgress2020.jpeg" alt="" class="cert-thumb">
+                        <div class="cert-thumb-overlay">View Award</div>
+                    </div>
+                    <h4>Good Progress Award</h4>
+                    <p>2020</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Image/PDF Modal -->
+    <div class="modal" id="modal-image">
+        <div class="modal-content modal-image-view">
+            <button class="modal-close" onclick="closeModal('modal-image')">&times;</button>
+            <div class="modal-image-wrapper" id="modalImageWrapper"></div>
+        </div>
+    </div>
+
+    <!-- ==================== CONTACT ==================== -->
+    <section id="contact" class="section">
+        <div class="section-container contact-center">
+            <h2 class="section-title"><span class="title-num">06.</span> Get In Touch</h2>
+            <p class="contact-intro">I'm always open to new opportunities, collaborations, and conversations. Let's connect.</p>
+            <div class="contact-grid">
+                <a href="mailto:hasinirg7@gmail.com" class="contact-card glass-card">
+                    <div class="contact-icon">&#9993;</div>
+                    <h4>Email</h4>
+                    <p>hasinirg7@gmail.com</p>
+                </a>
+                <a href="tel:+6587646580" class="contact-card glass-card">
+                    <div class="contact-icon">&#128222;</div>
+                    <h4>Phone</h4>
+                    <p>8764 6580</p>
+                </a>
+                <a href="https://www.linkedin.com/in/ginjala-h-31223b383/" target="_blank" class="contact-card glass-card">
+                    <div class="contact-icon">in</div>
+                    <h4>LinkedIn</h4>
+                    <p>Connect with me</p>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>Designed &amp; built by <span class="gradient-text">Ginjala Hasini</span> &copy; 2025</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
