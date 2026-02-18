@@ -614,6 +614,25 @@ button { font-family: inherit; }
     font-weight: 500;
 }
 
+.project-visit-btn {
+    display: inline-block;
+    margin-top: 12px;
+    padding: 8px 20px;
+    font-size: 0.8rem;
+    background: var(--teal);
+    color: var(--navy);
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.3s;
+}
+
+.project-visit-btn:hover {
+    background: var(--white);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 15px rgba(45, 212, 191, 0.3);
+}
+
 /* ===== MODALS ===== */
 .modal {
     display: none; position: fixed; inset: 0;
